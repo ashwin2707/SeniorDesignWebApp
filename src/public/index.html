@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Blackbox Signal Collection</title>
+		<link rel="stylesheet" href="css/styles.css" />
+		<link rel="stylesheet" href="css/graph.css" />
+		<link rel="stylesheet" href="css/data.css" />
+		<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+		<script type="module" src="js/main.js" defer></script>
+	</head>
+	<body>
+		<div id="main-application">
+			<section id="graph-section">
+				<h1 id="title">Blackbox Signal Collection: Data Visualization and Analysis Application</h1>
+				<div id="graph-container"></div>
+				<div id="toggle-graph-btn-container">
+					<button id="toggle-graph1-btn" class="toggle-graph-btn">Toggle Graph 1</button>
+					<button id="toggle-graph2-btn" class="toggle-graph-btn">Toggle Graph 2</button>
+					<button id="toggle-graph3-btn" class="toggle-graph-btn">Toggle Graph 3</button>
+				</div>
+				<div id="graph-stats-container">
+					<span class="graph-stat" id="mean-text"></span>
+					<span class="graph-stat" id="median-text"></span>
+					<span class="graph-stat" id="range-text"></span>
+					<span class="graph-stat" id="standard-deviation-text"></span>
+					<span class="graph-stat" id="variance-text"></span>
+					<span class="graph-stat" id="kurtosis-text"></span>
+					<span class="graph-stat" id="25th-percentile-text"></span>
+					<span class="graph-stat" id="75th-percentile-text"></span>
+					<span class="graph-stat" id="root-mean-square-text"></span>
+				</div>
+			</section>
+			<section id="data-section">
+				<div id="data-container">
+					<div id="dataset-title-container">
+						<button id="prev-dataset-btn" class="nav-dataset-btn">Prev Dataset</button>
+						<h2 id="dataset-title">Dataset 1</h2>
+						<button id="next-dataset-btn" class="nav-dataset-btn">Next Dataset</button>
+					</div>
+					<div id="data-headers">
+						<div class="data-header">Enable</div>
+						<div class="data-header">Time (ms)</div>
+						<div class="data-header">Voltage</div>
+					</div>
+					<div id="data-container1" class="data-rows"></div>
+					<div id="data-container2" class="data-rows"></div>
+					<div id="data-container3" class="data-rows"></div>
+				</div>
+				<div class="data-btns">
+					<button id="enable-all-btn" class="data-btn function-btn">Disable All</button>
+					<button id="sort-btn" class="data-btn function-btn">Sort by Voltage</button>
+					<button id="import-btn" class="data-btn function-btn">Import Data</button>
+					<input type="file" id="csv-file-input" accept=".csv" style="display: none" />
+
+					<button id="export-btn" class="data-btn function-btn">Export Data</button>
+					<input type="text" id="min-voltage-input" class="data-btn function-btn" placeholder="Enter min voltage" />
+					<input type="text" id="max-voltage-input" class="data-btn function-btn" placeholder="Enter max voltage" />
+				</div>
+			</section>
+		</div>
+	</body>
+</html>

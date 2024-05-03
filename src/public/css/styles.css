@@ -1,0 +1,35 @@
+:root {
+	--graph-section-width: 62vw;
+	--data-section-width: 30vw;
+	--application-height: 83vh;
+	--main-font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+	background-color: #808080;
+	color: #fff;
+}
+
+#main-application {
+	display: flex;
+	justify-content: space-around;
+}
+
+#graph-section {
+	height: var(--application-height);
+	width: var(--graph-section-width);
+}
+
+#data-section {
+	height: var(--application-height);
+	width: var(--data-section-width);
+	padding-top: 3%;
+}
+
+.data-rows {
+	height: calc(var(--application-height) * 0.73);
+	overflow-y: auto;
+}
+
+#title {
+	font-size: 2.6rem;
+}
